@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update avto</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/seller/{id}(id=${avto.getId()})}" th:object="${avto}">
+    <label for="number">Enter number: </label>
+    <input type="text" th:field="*{number}" id="number"/>
+    <div style="color:red" th:if="${#fields.hasErrors('number')}" th:errors="*{number}">Name Error</div>
+    <br/>
+    <label for="price">Enter price: </label>
+    <input type="text" th:field="*{price}" id="price"/>
+    <div style="color:red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Name Error</div>
+    <br/>
+    <label for="marka">Enter marka: </label>
+    <input type="text" th:field="*{marka}" id="marka"/>
+    <div style="color:red" th:if="${#fields.hasErrors('marka')}" th:errors="*{marka}">Name Error</div>
+    <br/>
+    <label for="currency">Enter currency: </label>
+    <input type="text" th:field="*{currency}" id="currency"/>
+    <div style="color:red" th:if="${#fields.hasErrors('currency')}" th:errors="*{currency}">Name Error</div>
+    <br/>
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

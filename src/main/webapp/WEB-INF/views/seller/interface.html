@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+
+<div th:each="avto1 : ${avto}">
+    <a th:href="@{/seller/{id}(id=${avto1.getId()})}" th:text="${avto1.getMarka()+ ', ' + avto1.getCurrency() + ', ' + avto1.getNumber()+ ', ' + avto1.getPrice()}">user</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/seller/new">Create new person</a>
+
+</body>
+</html>

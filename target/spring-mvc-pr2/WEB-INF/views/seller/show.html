@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show</title>
+</head>
+<body>
+<p th:text="${avto.getId()}">VALUE</p>
+<p th:text="${avto.getNumber()}">VALUE</p>
+<p th:text="${avto.getPrice()}">VALUE</p>
+<p th:text="${avto.getMarka()}">VALUE</p>
+<p th:text="${avto.getCurrency()}">VALUE</p>
+
+<a th:href="@{/seller/{id}/edit(id=${avto.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/seller/{id}(id=${avto.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+
+</form>
+</body>
+</html>

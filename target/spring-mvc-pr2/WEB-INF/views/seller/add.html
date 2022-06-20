@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New avto</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/seller}" th:object="${avto}">
+    <label for="id">Enter id: </label>
+    <input type="text" th:field="*{id}" id="id"/>
+    <div style="color:red" th:if="${#fields.hasErrors('id')}" th:errors="*{id}">Na</div>
+    <br/>
+    <label for="number">Enter number: </label>
+    <input type="text" th:field="*{number}" id="number"/>
+    <div style="color:red" th:if="${#fields.hasErrors('number')}" th:errors="*{number}">Na</div>
+    <br/>
+    <label for="price">Enter price: </label>
+    <input type="text" th:field="*{price}" id="price"/>
+    <div style="color:red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Na</div>
+    <br/>
+    <label for="marka">Enter marka: </label>
+    <input type="text" th:field="*{marka}" id="marka"/>
+    <div style="color:red" th:if="${#fields.hasErrors('marka')}" th:errors="*{marka}">Na</div>
+    <br/>
+    <label for="currency">Enter currency: </label>
+    <input type="text" th:field="*{currency}" id="currency"/>
+    <div style="color:red" th:if="${#fields.hasErrors('currency')}" th:errors="*{currency}">Na</div>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency</title>
+</head>
+<body>
+
+<div th:each="cur : ${currency}">
+    <a th:text="${cur.getName() + ' - ' + cur.getValue()}">user</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/seller/edit">Change currency</a>
+
+</body>
+</html>
