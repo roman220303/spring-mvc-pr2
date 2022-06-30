@@ -3,12 +3,13 @@ package ua.roman.springmvcpr2.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import ua.roman.springmvcpr2.models.Avto;
 
 import java.util.List;
 
-@Controller
+@Component
 public class AvtoDAO {
     private final JdbcTemplate jdbcTemplate;
 

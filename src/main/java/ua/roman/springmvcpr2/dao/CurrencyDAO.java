@@ -4,13 +4,14 @@ package ua.roman.springmvcpr2.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import ua.roman.springmvcpr2.models.Avto;
 import ua.roman.springmvcpr2.models.Currency;
 
 import java.util.List;
 
-@Controller
+@Component
 public class CurrencyDAO {
 
     private final JdbcTemplate jdbcTemplate;
